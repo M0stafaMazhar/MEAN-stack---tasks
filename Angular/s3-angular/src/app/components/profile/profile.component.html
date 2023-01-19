@@ -1,0 +1,9 @@
+<div class="container">
+    <div class="alert alert-danger" *ngIf="errorFlag">
+        {{errorMessage}}
+    </div>
+    
+    <div class="alert alert-primary" *ngIf="profile">
+        {{profile | json}}
+    </div>
+</div>

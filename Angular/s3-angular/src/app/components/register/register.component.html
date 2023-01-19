@@ -1,0 +1,17 @@
+<form class="row gy-3" #loginForm="ngForm" (ngSubmit)="handleSubmit(loginForm)">
+    <div class="col-6">
+        <input type="text" placeholder="User Name" class="form-control" name="userName" required [(ngModel)]="model.userName" #userName="ngModel">
+        <div class="alert alert-danger" *ngIf="userName.errors?.['required'] && userName.dirty">
+            User Name is required
+        </div>
+    </div>
+    <div class="col-6">
+        <input type="password" class="form-control" placeholder="Password" name="password" required [(ngModel)]="model.password" #password="ngModel">
+        <div class="alert alert-danger" *ngIf="password.errors?.['required'] && (password.dirty || loginForm.submitted)">
+            Password is required
+        </div>
+    </div>
+    <div class="col-12">
+        <button class="btn btn-primary">Login</button>
+    </div>
+</form>
