@@ -1,0 +1,24 @@
+<div class="container">
+    <div [ngSwitch]="num">
+        <ng-container *ngFor="let item of arr ; let i = index">
+            <div class="alert alert-danger" *ngSwitchCase="i">num = {{item}}</div>
+        </ng-container>
+    </div>
+</div>
+
+
+
+
+<div class="container">
+    <div [ngSwitch]="date">
+        <ng-container *ngFor="let item of ma ; let i = index">
+            <div class="alert alert-danger" *ngSwitchCase="i">Month = {{item}}</div>
+        </ng-container>
+    </div>
+</div>
+
+
+
+<div class="container">
+    <h4>{{text | replace : "hello"}}</h4>
+</div>
