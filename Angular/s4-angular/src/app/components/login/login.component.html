@@ -1,0 +1,25 @@
+<div class="container" >
+    
+
+    <form class="row" [formGroup]="loginForm" (ngSubmit)="handleSubmit()">
+        <div class="col-12 col-lg-6">
+            <input type="text" class="form-control" name="userName" placeholder="User name" formControlName="userName">
+            <div class="alert alert-danger" *ngIf="submitFlag && userData?.['userName']?.errors?.['required']">
+                User Name is required.
+            </div>
+        </div>
+
+        <div class="col-12 col-lg-6">
+            <input type="password" class="form-control" name="password" placeholder="Password" formControlName="password">
+            <div class="alert alert-danger" *ngIf="submitFlag && userData?.['password']?.errors?.['required']">
+                Password is required.
+            </div>
+        </div>
+
+        <div class="col-12">
+            <button class="btn btn-dark" >Login</button>
+        </div>
+    </form>
+
+
+</div>
