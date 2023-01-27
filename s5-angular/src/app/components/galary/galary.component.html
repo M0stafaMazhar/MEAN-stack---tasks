@@ -1,0 +1,17 @@
+<div class="row justify-content-center">
+    <div class="col-3" *ngIf="loadingFlag">
+        <img src="assets/images/rolling-cat-cat-rolling.gif" class="w-100">
+    </div>
+
+    <ng-container *ngIf="!loadingFlag">
+        <div class="col-4" *ngFor="let item of galary">
+            <div class="card">
+                <img src="{{item.url}}" class="card-img-top">
+                <div class="card-body"> 
+                    <h3>{{item.title}}</h3>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+    
+</div>
